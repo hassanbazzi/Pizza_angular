@@ -1,0 +1,23 @@
+{
+  "name": "Pizza_angular",
+  "homepage": "https://github.com/biomazi/Pizza_angular",
+  "description": "Application that handles pizza orders",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Marko Mazibrada"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.5",
+    "jquery": "^2.2.3"
+  }
+}

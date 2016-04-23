@@ -1,0 +1,70 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+$large: "only screen and (min-width : 768px)";
+
+.sass-brand {
+   padding: 5px 15px;
+
+   .sass-brand-img{
+      width: 40px;
+   }
+}
+
+
+.navbar-wrapper {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 20;
+   @media #{$large}{
+      margin-top: 20px;
+   }
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+   padding-right: 0;
+   padding-left: 0;
+   @media #{$large} {
+      padding-right: 15px;
+      padding-left: 15px;
+   }
+}
+.navbar-wrapper .navbar {
+   padding-right: 15px;
+   padding-left: 15px;
+   @media #{$large} {
+      padding-right: 0;
+      padding-left: 0;
+      border-radius: 4px;
+   }
+}
+.navbar-wrapper .navbar .container {
+   width: auto;
+}
+.jumbotron {
+   margin-top: 30px;
+}
+/* @media (min-width: 768px) {
+  Navbar positioning foo
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  The navbar becomes detached from the top, so we round the corners
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  } */
