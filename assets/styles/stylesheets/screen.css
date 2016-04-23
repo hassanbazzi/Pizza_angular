@@ -124,6 +124,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: auto;
 }
 
+/* line 50, ../sass/screen.scss */
+.jumbotron {
+  margin-top: 30px;
+}
+
 /* @media (min-width: 768px) {
   Navbar positioning foo
   .navbar-wrapper {
