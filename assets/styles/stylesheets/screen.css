@@ -78,7 +78,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 18, ../sass/screen.scss */
 .navbar-wrapper {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
@@ -125,8 +125,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 50, ../sass/screen.scss */
-.jumbotron {
-  margin-top: 120px;
+.content-border {
+  margin-top: 30px;
+}
+
+/* .jumbotron {
+   margin-top: 120px;
+} */
+/* line 57, ../sass/screen.scss */
+td:not(:first-child), th:not(:first-child) {
+  color: red;
+  text-align: right;
+  width: 100px;
 }
 
 /* @media (min-width: 768px) {

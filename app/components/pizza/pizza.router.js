@@ -1,0 +1,18 @@
+(function () {
+   angular
+      .module('pizzaModule.pizza')
+      .config(config);
+
+   config.$inject = ["$stateProvider"];
+   function config ($stateProvider) {
+      $stateProvider
+         .state("main.pizzas",{
+            url: "/pizzas",
+            views: {
+               "content@": {
+                  templateUrl: "./app/components/pizza/pizza-list.html"
+               }
+            }
+         });
+   }
+})();
