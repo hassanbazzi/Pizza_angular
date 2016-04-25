@@ -59,6 +59,16 @@ td:not(:first-child),th:not(:first-child) {
     text-align: right;
     width:100px;
 }
+body {
+  background: url('/assets/images/pizzaBCG.jpg') no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+/* .bcg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+} */
 /* @media (min-width: 768px) {
   Navbar positioning foo
   .navbar-wrapper {

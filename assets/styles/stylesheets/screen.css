@@ -139,6 +139,18 @@ td:not(:first-child), th:not(:first-child) {
   width: 100px;
 }
 
+/* line 62, ../sass/screen.scss */
+body {
+  background: url("/assets/images/pizzaBCG.jpg") no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+/* .bcg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+} */
 /* @media (min-width: 768px) {
   Navbar positioning foo
   .navbar-wrapper {

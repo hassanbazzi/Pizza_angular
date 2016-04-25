@@ -13,6 +13,14 @@
                   templateUrl: "./app/components/pizza/pizza-list.html"
                }
             }
+         })
+         .state("main.order",{
+            url: "/order",
+            views: {
+               "content@": {
+                  templateUrl: "./app/components/pizza/order-form.html"
+               }
+            }
          });
    }
 })();
