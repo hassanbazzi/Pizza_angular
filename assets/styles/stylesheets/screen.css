@@ -151,6 +151,104 @@ body {
   background-color: #EEEEEE;
 }
 
+/* line 70, ../sass/screen.scss */
+.navbar {
+  background-color: #EEEEEE;
+}
+
+/* line 73, ../sass/screen.scss */
+.active {
+  background-color: black;
+}
+
+/* line 76, ../sass/screen.scss */
+.navbar-text {
+  line-height: 20px;
+}
+
+/* line 85, ../sass/screen.scss */
+.navbar-default {
+  background-color: #d5d5ce;
+  border-color: #5c5c5c;
+}
+/* line 88, ../sass/screen.scss */
+.navbar-default .navbar-brand {
+  color: #417d8c;
+}
+/* line 90, ../sass/screen.scss */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #7eaddb;
+}
+/* line 92, ../sass/screen.scss */
+.navbar-default .navbar-text {
+  color: #417d8c;
+}
+/* line 96, ../sass/screen.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #417d8c;
+}
+/* line 98, ../sass/screen.scss */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #7eaddb;
+}
+/* line 117, ../sass/screen.scss */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #7eaddb;
+  background-color: #5c5c5c;
+}
+/* line 121, ../sass/screen.scss */
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #7eaddb;
+  background-color: #5c5c5c;
+}
+/* line 124, ../sass/screen.scss */
+.navbar-default .navbar-toggle {
+  border-color: #5c5c5c;
+}
+/* line 126, ../sass/screen.scss */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #5c5c5c;
+}
+/* line 128, ../sass/screen.scss */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #417d8c;
+}
+/* line 130, ../sass/screen.scss */
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #417d8c;
+}
+/* line 133, ../sass/screen.scss */
+.navbar-default .navbar-link {
+  color: #417d8c;
+}
+/* line 135, ../sass/screen.scss */
+.navbar-default .navbar-link:hover {
+  color: #7eaddb;
+}
+
+@media (max-width: 767px) {
+  /* line 139, ../sass/screen.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #417d8c;
+  }
+  /* line 141, ../sass/screen.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #7eaddb;
+  }
+  /* line 144, ../sass/screen.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #7eaddb;
+    background-color: #5c5c5c;
+  }
+}
+/* #navbar {
+  div{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }
+} */
 /* .bcg-img {
   position: absolute;
   left: 0;
