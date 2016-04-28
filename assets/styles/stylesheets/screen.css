@@ -146,6 +146,11 @@ body {
   background-size: cover;
 }
 
+/* line 67, ../sass/screen.scss */
+.bc-color {
+  background-color: #EEEEEE;
+}
+
 /* .bcg-img {
   position: absolute;
   left: 0;
