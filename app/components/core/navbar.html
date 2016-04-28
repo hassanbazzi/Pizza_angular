@@ -16,7 +16,7 @@ dodaj active class na aktivno polje, promeni malo boju navbara
   <div class="navbar-wrapper">
     <div class="container">
 
-      <nav class="navbar navbar-inverse navbar-static-top">
+      <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -28,21 +28,25 @@ dodaj active class na aktivno polje, promeni malo boju navbara
             <a class="navbar-brand sass-brand" href="#">
               <img src="./assets/icons/Pizza-icon.png" class="sass-brand-img" alt="Pizza palace" />
             </a>
+
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a ui-sref="main.home">Home</a></li>
+              <!--  ui-sref-active puts active class on clicked state  -->
+              <li ui-sref-active="active"><a ui-sref="main.home">Home</a></li>
             </ul>
+            <p class="navbar-text">Order from us,you won't regret it!</p>
 
             <ul class="nav navbar-nav navbar-right">
-              <li><a ui-sref="main.pizzas">Pizza list</a></li>
-              <li><a ui-sref="main.order">Order pizza</a></li>
-              <li><a href="#">About</a></li>
+              <li ui-sref-active="active"><a ui-sref="main.pizzas">Pizza list</a></li>
+              <li ui-sref-active="active"><a ui-sref="main.order">Order pizza</a></li>
+              <li ui-sref-active="active"><a href="#">About</a></li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
   </div>
+  <!-- Need to find out how to put navbar text into middle of navbar so it stays there always -->
 <!-- </body>
 </html> -->
