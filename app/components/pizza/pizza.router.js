@@ -10,7 +10,9 @@
             url: "/pizzas",
             views: {
                "content@": {
-                  templateUrl: "./app/components/pizza/pizza-list.html"
+                  templateUrl: "./app/components/pizza/pizza-list.html",
+                  controller: "PizzaListController",
+                  controllerAs: "plc"
                }
             }
          })

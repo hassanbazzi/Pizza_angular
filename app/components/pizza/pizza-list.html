@@ -1,7 +1,7 @@
 <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 bc-color">
    <div class="table-responsive">
    <table class="table table-hover">
-      <caption class="text-center">Pizza List</caption>
+
       <thead>
          <tr>
             <th>Pizza &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true"> Prev</i>
@@ -16,30 +16,25 @@
          </tr>
       </thead>
       <tbody>
-         <tr>
+         <tr ng-repeat="pizza in plc.pizzas">
             <td>
-               <h3>Name of Pizza</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente doloribus a enim ut aut explicabo veniam perferendis, praesentium itaque earum reprehenderit, eos maxime minus. Optio temporibus est blanditiis vel asperiores!</p>
+               <h3>{{pizza.name}}</h3>
+               <p>{{pizza.description}}</p>
             </td>
-            <td>Cena pizze</td>
-            <td>ocena pizze</td>
-         </tr>
-         <tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-         </tr>
-         <tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-         </tr>
-         <tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
+            <td>{{pizza.price}}</td>
+            <td>{{pizza.grade}}</td>
          </tr>
       </tbody>
+      <!-- <div class="row gray">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" ng-repeat="pizza in plc.pizzas">
+            <h4><a ng-href ng-click="plc.editOrder(pizza._id)">{{pizza.name}}</a></h4><br>
+            <p>{{pizza.description}}</p>
+            <span class="pull-right">
+                <span>{{pizza.price}} e</span>
+                <span>{{pizza.grade}}</span>
+            </span>
+        </div>
+          </div> -->
    </table>
    </div>
 </div>
