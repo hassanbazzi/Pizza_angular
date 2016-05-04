@@ -23,6 +23,14 @@
                   templateUrl: "./app/components/pizza/order-form.html"
                }
             }
+         })
+         .state("main.orderPizza", {
+            url: "/order/:PizzaId",
+            views: {
+               "content@": {
+                  templateUrl: "./app/components/pizza/order-form.html"
+               }
+            }
          });
    }
 })();

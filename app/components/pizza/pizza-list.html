@@ -4,24 +4,38 @@
 
       <thead>
          <tr>
-            <th>Pizza &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-double-left" aria-hidden="true"> Prev</i>
-            <span>Next <i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+            <th>Pizza &nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-primary" ng-click="plc.changePage(plc.page - 1)" ng-disabled="plc.page === 1" ><i class="fa fa-angle-double-left" aria-hidden="true"> Prev</i></button>
+            <!--it can be also done with ng-show
+            ng-show="plc.page !== 1"
+            ng-show="plc.page < plc.noPages" -->
+
+            <button class="btn btn-primary" ng-click="plc.changePage(plc.page + 1)" ng-disabled="plc.page === plc.noPages" >Next <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
                </th>
                <th>Price
-                  <i class="fa fa-sort" aria-hidden="true"></i>
+                  <button class="btn btn-primary" ng-click="plc.sort('price')">
+                  <i class="fa fa-sort disabled" ng-hide="plc.sortCriteria === 'price'" aria-hidden="true"></i>
+                  <i class="fa fa-sort-desc" ng-show="plc.sortCriteria == 'price' && plc.sortDirection == 'asc'"></i>
+                  <i class="fa fa-sort-asc" ng-show="plc.sortCriteria == 'price' && plc.sortDirection == 'desc'"></i>
+                  </button>
                </th>
+               <!-- not sure what disabled class do's here -->
                <th>Grade
-                  <i class="fa fa-sort" aria-hidden="true"></i>
+                  <button class="btn btn-primary" ng-click="plc.sort('grade')">
+                  <i class="fa fa-sort disabled" ng-hide="plc.sortCriteria === 'grade'" aria-hidden="true"></i>
+                  <i class="fa fa-sort-desc" ng-show="plc.sortCriteria == 'grade' && plc.sortDirection == 'asc'"></i>
+                  <i class="fa fa-sort-asc" ng-show="plc.sortCriteria == 'grade' && plc.sortDirection == 'desc'"></i>
+                  </button>
             </th>
          </tr>
       </thead>
       <tbody>
          <tr ng-repeat="pizza in plc.pizzas">
             <td>
-               <h3>{{pizza.name}}</h3>
+               <h3><a ng-href ng-click="plc.orderPizza(pizza._id)">{{pizza.name}}</a></h3>
                <p>{{pizza.description}}</p>
             </td>
-            <td>{{pizza.price}}</td>
+            <td>{{pizza.price | currency : "€ "}}</td>
             <td>{{pizza.grade}}</td>
          </tr>
       </tbody>

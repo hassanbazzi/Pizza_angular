@@ -11,7 +11,7 @@
          var value = {
             getAllPizzas : getAllPizzas,
             getSinglePizza : getSinglePizza,
-            addOrder : addOrder,
+            addOrder : addOrder
          };
          function getAllPizzas (params) {
             return $http.get(urlPizzas, {params : params});
