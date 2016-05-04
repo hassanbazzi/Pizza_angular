@@ -10,12 +10,22 @@
             url: "/pizzas",
             views: {
                "content@": {
-                  templateUrl: "./app/components/pizza/pizza-list.html"
+                  templateUrl: "./app/components/pizza/pizza-list.html",
+                  controller: "PizzaListController",
+                  controllerAs: "plc"
                }
             }
          })
          .state("main.order",{
             url: "/order",
+            views: {
+               "content@": {
+                  templateUrl: "./app/components/pizza/order-form.html"
+               }
+            }
+         })
+         .state("main.orderPizza", {
+            url: "/order/:PizzaId",
             views: {
                "content@": {
                   templateUrl: "./app/components/pizza/order-form.html"
