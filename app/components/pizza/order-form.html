@@ -6,8 +6,10 @@
          <div class="form-group">
             <label class="col-sm-2 control-label" for="pizza">Pizza</label>
             <div class="col-sm-10 col-md-4">
-               <select id="pizza" class="form-control" ng-model="ofc.order.pizza" ng-options="select as label for value in array">
-                  <option ng-repeat="x in ofc.pizzas" value="{{x.name}}">{{x.name}}</option>
+               <select id="pizza" class="form-control" ng-model="ofc.order.pizza" ng-options="pizza as pizza.name for pizza in ofc.pizzas">
+               <!--  replace later with starting pizza selected -->
+                  <option value="">select pizza</option>
+
                </select>
             </div>
          </div>

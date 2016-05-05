@@ -3,16 +3,19 @@
       .module('pizzaModule.pizza')
       .controller('OrderFormController', OrderFormController);
 
-      OrderFormController.$inject = ['PizzaService','$state','$window','pizzas'];
+      OrderFormController.$inject = ['PizzaService','$state','$window','pizzas','pizza'];
 
       function OrderFormController (PizzaService,$state,$window,pizzas,pizza) {
          var ofc = this;
 
-         ofc.pizza = pizza.data;
+         ofc.order = {};
+         ofc.order.pizza = pizza.data;
          ofc.pizzas = pizzas.data.results;
 
+
+
          ofc.submit = function () {
-            PizzaService.addOrder(ofc.pizza).then(onSuccess, onFail);
+            PizzaService.addOrder(ofc.order.pizza).then(onSuccess, onFail);
          };
 
          function onSuccess () {
