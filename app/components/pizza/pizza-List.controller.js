@@ -3,9 +3,11 @@
       .module('pizzaModule.pizza')
       .controller('PizzaListController',PizzaListController);
 
-      PizzaListController.$inject = ['PizzaService','$window','$scope'];
-      function PizzaListController (PizzaService,$window,$state) {
+      PizzaListController.$inject = ['PizzaService','$window','$scope','pizzas'];
+      function PizzaListController (PizzaService,$window,$state,pizzas) {
          var plc = this;
+
+         plc.pizzas = pizzas.data;
 
          plc.page = 1;
          plc.pageSize = 5;

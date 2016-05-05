@@ -12,7 +12,10 @@
                "content@": {
                   templateUrl: "./app/components/pizza/pizza-list.html",
                   controller: "PizzaListController",
-                  controllerAs: "plc"
+                  controllerAs: "plc",
+                  resolve: {
+                     pizzas : getPizzas
+                  }
                }
             }
          })
@@ -20,17 +23,30 @@
             url: "/order",
             views: {
                "content@": {
-                  templateUrl: "./app/components/pizza/order-form.html"
+                  templateUrl: "./app/components/pizza/order-form.html",
+                  controller: "OrderFormController",
+                  controllerAs: "ofc",
+                  resolve: {
+                     pizzas : getPizzas,
+                     pizza: function () {
+                        return {};
+                     }
+                  }
                }
             }
          })
-         .state("main.orderPizza", {
+         /*.state("main.orderPizza", {
             url: "/order/:PizzaId",
             views: {
                "content@": {
                   templateUrl: "./app/components/pizza/order-form.html"
                }
             }
-         });
+         });*/
+         // learn how to $timeout properly (tried return $timeout ....pizzaService.get......)
+         function getPizzas (PizzaService) {
+            return PizzaService.getAllPizzas();
+         }
+
    }
 })();
