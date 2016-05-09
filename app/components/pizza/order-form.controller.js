@@ -8,8 +8,13 @@
       function OrderFormController (PizzaService,$state,$window,pizzas,pizza) {
          var ofc = this;
 
-         ofc.order = {"pizza": pizza.data};
          ofc.pizzas = pizzas.data.results;
+
+         ofc.pizzas.forEach( function(value, key){
+           if(value._id == pizza.data._id)
+            ofc.preloadedKey = key;
+         }
+       );
 
 
 
