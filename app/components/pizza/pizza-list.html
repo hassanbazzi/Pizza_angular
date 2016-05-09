@@ -32,7 +32,7 @@
       <tbody>
          <tr ng-repeat="pizza in plc.pizzas">
             <td>
-               <h3><a ng-href ng-click="plc.orderPizza(pizza._id)">{{pizza.name}}</a></h3>
+               <h3><a ng-href ng-click="plc.order(pizza._id)">{{pizza.name}}</a></h3>
                <p>{{pizza.description}}</p>
             </td>
             <td>{{pizza.price | currency : "€ "}}</td>

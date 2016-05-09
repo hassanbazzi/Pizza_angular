@@ -1,22 +1,27 @@
+<div class="container-fluid">
    <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 bc-color">
-      <form class="form-horizontal" role="form">
+      <!--  here we will define our form,place novalidate and name form for use with ngMessages and validation by angular-->
+      <form class="form-horizontal" role="form" name="ofc.form" novalidate ng-submit="ofc.submit()">
+
          <div class="form-group">
             <label class="col-sm-2 control-label" for="pizza">Pizza</label>
             <div class="col-sm-10 col-md-4">
-               <select id="pizza" class="form-control">
-                  <option value="prva">Prva Pizza</option>
+               <select id="pizza" class="form-control" ng-model="ofc.order.pizza" ng-options="pizza as pizza.name for pizza in ofc.pizzas">
+               <!--  replace later with starting pizza selected -->
+                  <option value="">select pizza</option>
+
                </select>
             </div>
          </div>
          <div class="form-group">
-            <p class="col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nemo excepturi omnis! Voluptatum libero omnis sit quasi ducimus pariatur consectetur iure eius expedita placeat, fuga quidem, ea, provident minima atque! Ducimus neque, enim quisquam voluptates laudantium, cupiditate facilis obcaecati praesentium magni possimus, cumque inventore qui modi incidunt at totam? A amet quibusdam tempora natus temporibus optio voluptate aliquid nobis praesentium consectetur eos officia minima vero commodi, nemo debitis deserunt architecto tenetur ab perferendis illum cum. Sapiente tempora nam natus, iure tenetur distinctio ratione corporis, laboriosam quidem iusto deserunt dolorum commodi officia expedita aperiam recusandae molestiae autem harum atque. Ullam doloremque, dignissimos eligendi vel a officiis porro sit quas sed modi veniam est, accusantium culpa voluptatum laboriosam harum non, ex rem facere. Unde distinctio eligendi voluptatibus odio quas inventore culpa quidem maiores temporibus nisi a ullam, dignissimos voluptas cupiditate cumque? Beatae placeat fugit sint odio voluptatibus officiis iure, illo ut. Cupiditate.</p>
+            <p class="col-sm-12">{{ofc.order.pizza.description}}</p>
          </div>
 
 
          <div class="form-group">
             <label class="col-sm-2 control-label" for="size">Size</label>
             <div class="col-sm-10 col-md-4">
-               <select id="size" class="form-control">
+               <select id="size" class="form-control" ng-model="ofc.order.pizza.selectedSize">
                   <option value="---">---</option>
                   <option value="M">M</option>
                   <option value="L">L</option>
@@ -28,37 +33,44 @@
          <div class="form-group">
             <label class="col-sm-2 control-label" for="comment">Comment</label>
             <div class="col-sm-10 col-md-4">
-               <textarea class="form-control" id="comment" name="comment" placeholder="Enter comment here"></textarea>
+               <textarea ng-model="ofc.order.pizza.comment" class="form-control" id="comment" name="comment" placeholder="Enter comment here"></textarea>
             </div>
          </div>
-
+         <!--how to solve delivery?-->
          <div class="form-group">
             <label class="col-sm-2 control-label" for="delivery">Delivery?</label>
             <div class="col-sm-10 col-md-4">
-               <input class="form-control" type="checkbox" name="delivery" value="" id="delivery">
+               <input ng-model="ofc.order.pizza.delivery" class="form-control" type="checkbox" name="delivery" value="" id="delivery">
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-sm-2 control-label" for="address">Address</label>
             <div class="col-sm-10 col-md-4">
-               <input class="form-control" type="text" name="address" id="address">
+               <input ng-model="ofc.order.pizza.address" class="form-control" type="text" name="address" id="address">
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-sm-2 control-label" for="telephone">Telephone</label>
             <div class="col-sm-10 col-md-4">
-               <input class="form-control" type="text" name="telephone" id="telephone">
+               <input ng-model="ofc.order.pizza.telephone" class="form-control" type="text" name="telephone" id="telephone">
             </div>
          </div>
 
          <div class="form-group">
             <label class="col-sm-2 control-label" for="surname">Surname</label>
             <div class="col-sm-10 col-md-4">
-               <input class="form-control" type="text" name="surname" id="surname">
+               <input ng-model="ofc.order.pizza.surname" class="form-control" type="text" name="surname" id="surname">
+            </div>
+         </div>
+
+         <div class="form-group">
+            <div class="col-xs-6">
+            <button class="btn btn-primary btn-lg" type="submit" name="submit">Confirm order</button>
+            <button class="btn btn-danger btn-sm" type="submit" name="submit">Restart form</button>
             </div>
          </div>
       </form>
    </div>
-
+</div>
