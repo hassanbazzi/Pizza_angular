@@ -28,24 +28,33 @@
                   controllerAs: "ofc",
                   resolve: {
                      pizzas : getPizzas,
-                     pizza: function () {
+                     pizza : function () {
                         return {};
                      }
                   }
                }
             }
          })
-         /*.state("main.orderPizza", {
+         .state("main.orderPizza", {
             url: "/order/:PizzaId",
             views: {
                "content@": {
-                  templateUrl: "./app/components/pizza/order-form.html"
+                  templateUrl: "./app/components/pizza/order-form.html",
+                  controller: "OrderFormController",
+                  controllerAs: "ofc",
+                  resolve: {
+                     pizzas : getPizzas,
+                     pizza : getSinglePizza
+                  }
                }
             }
-         });*/
+         });
          // learn how to $timeout properly (tried return $timeout ....pizzaService.get......)
          function getPizzas (PizzaService) {
             return PizzaService.getAllPizzas();
+         }
+         function getSinglePizza (PizzaService,$stateParams){
+            return PizzaService.getSinglePizza($stateParams.PizzaId);
          }
 
    }

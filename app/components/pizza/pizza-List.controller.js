@@ -3,7 +3,7 @@
       .module('pizzaModule.pizza')
       .controller('PizzaListController',PizzaListController);
 
-      PizzaListController.$inject = ['PizzaService','$window','$scope','pizzas'];
+      PizzaListController.$inject = ['PizzaService','$window','$state','pizzas'];
       function PizzaListController (PizzaService,$window,$state,pizzas) {
          var plc = this;
 
@@ -64,9 +64,9 @@
             }
             getPizzas();
          };
-         // clicking on single pizza changes state and view to movie-form
+         // clicking on single pizza changes state and view to pizza-form
          plc.order = function (id) {
-            $state.go('main.ordersPizza', {PizzaId: id});
+            $state.go('main.orderPizza', {PizzaId: id});
          };
 
       }

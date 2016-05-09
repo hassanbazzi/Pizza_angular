@@ -8,8 +8,7 @@
       function OrderFormController (PizzaService,$state,$window,pizzas,pizza) {
          var ofc = this;
 
-         ofc.order = {};
-         ofc.order.pizza = pizza.data;
+         ofc.order = {"pizza": pizza.data};
          ofc.pizzas = pizzas.data.results;
 
 
